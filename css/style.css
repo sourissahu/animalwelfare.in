@@ -207,7 +207,7 @@
 
 .site-section .row .col-md-3 img {
   width: 100%;
-  height: 200px; /* You can adjust this height to your preferred size */
+  height: 300px; /* You can adjust this height to your preferred size */
   object-fit: cover;
   object-position: center;
 }
