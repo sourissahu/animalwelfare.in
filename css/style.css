@@ -205,6 +205,13 @@
   background-color: #5bbd7f;
 }
 
+.site-section .row .col-md-3 img {
+  width: 100%;
+  height: 200px; /* You can adjust this height to your preferred size */
+  object-fit: cover;
+  object-position: center;
+}
+
 body {
   line-height: 1.7;
   font-weight: 400;
