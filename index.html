@@ -403,18 +403,61 @@ Through timely care and intervention, we strive to reduce suffering and promote 
 
 
 
-    <form id="contact-form">
-  <input type="text" name="first_name" placeholder="First name" required>
-  <input type="text" name="last_name" placeholder="Last name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Your message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+   <div class="site-section bg-light" id="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="text-black section-title text-uppercase">Contact Us</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mb-5">
+        <form id="contact-form">
+          <div class="form-group row">
+            <div class="col-md-6 mb-4 mb-lg-0">
+              <input type="text" name="first_name" class="form-control" placeholder="First name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" name="last_name" class="form-control" placeholder="Last name" required>
+            </div>
+          </div>
 
+          <div class="form-group row">
+            <div class="col-md-12">
+              <input type="email" name="email" class="form-control" placeholder="Email address" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <textarea name="message" class="form-control" placeholder="Write your message." cols="30" rows="10" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-6 ml-auto">
+              <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
+            </div>
+          </div>
+        </form>
+
+        <!-- Thank you alert -->
+        <div id="thank-you-msg" class="alert alert-success mt-3 d-none">
+          🎉 Thank you! Your message has been sent.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script for Formspree POST -->
 <script>
   const form = document.getElementById('contact-form');
+  const thankYou = document.getElementById('thank-you-msg');
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const data = {
       first_name: form.first_name.value,
       last_name: form.last_name.value,
@@ -431,13 +474,14 @@ Through timely care and intervention, we strive to reduce suffering and promote 
     });
 
     if (response.ok) {
-      alert('Message sent!');
+      thankYou.classList.remove('d-none');
       form.reset();
     } else {
-      alert('Oops! Something went wrong.');
+      alert('Something went wrong. Please try again later.');
     }
   });
 </script>
+
 
 
 
