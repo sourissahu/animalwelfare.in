@@ -260,7 +260,7 @@
   }
 
   .gallery-item img {
-    max-height: 200px; /* smaller max height on small screens */
+    max-height: 300px; /* smaller max height on small screens */
   }
 }
 
