@@ -227,7 +227,7 @@
 
 .gallery-item img {
   width: 100%;
-  height: 200px; /* or auto, or your preferred fixed height */
+  height: 300px; /* or auto, or your preferred fixed height */
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
