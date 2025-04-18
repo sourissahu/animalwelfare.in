@@ -259,8 +259,9 @@
     max-width: 100%;
   }
 
-  .gallery-item img {
-    max-height: 600px; /* smaller max height on small screens */
+   .gallery-item img {
+    height: auto;         /* allow image to scale naturally */
+    max-height: none;     /* remove max height restriction */
   }
 }
 
