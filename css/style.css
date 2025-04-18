@@ -228,7 +228,7 @@
 
 .gallery-item img {
   width: 100%;
-  height: auto; /* auto height keeps image ratio */
+  height: 300px; /* auto height keeps image ratio */
   max-height: 300px; /* restricts height without distorting */
   object-fit: cover;
   object-position: center;
